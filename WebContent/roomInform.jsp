@@ -11,11 +11,16 @@
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css" />
+<script>
+	$(function() {
+		$(".datepicker").datepicker();
+	});
+</script>
 </head>
 <body>
 
 	<jsp:include page="share/header.jsp"></jsp:include>
-	<div id="wrap">
+	<div class="wrap">
 		<div id="main_inform">
 			<div class="tab">
 				<ul>
@@ -26,13 +31,74 @@
 					<li><a href="#"><span>Street View</span></a>
 						<div></div></li>
 					<li><a href="#"><span>Calendar</span></a>
-					<div></div></li>
+						<div></div></li>
 				</ul>
 			</div>
-			<div id="description"></div>
-			<div id="review"></div>
-			<div id="reserve">form<br>
+			<div id="reserve">
+				<div id="price">
+					form<br> <span></span>
+					<form>
+						<select>
+							<option>Per Night</option>
+							<option>Per Week</option>
+							<option>Per Month</option>
+						</select>
+				</div>
+				<div class="check">
+					Check In <input type="text" name="checkIn" class="datepicker"
+						placeholder="Check In">
+				</div>
+				<div class="check">
+					Check Out <input type="text" name="checkOut" class="datepicker"
+						placeholder="Check Out">
+				</div>
+				<div class="check">
+					Guest <select>
+						<%
+							for (int i = 1; i < 16; i++) {
+						%>
+						<option>
+							<%=i%></option>
+						<%
+							}
+						%>
+					</select>
+				</div>
+				<div class="submit">
+					Subtotal<br> <span></span> <input type="submit" name="submit"
+						value="Book It" class="btn-primary">
+				</div>
+				</form>
 			</div>
+			<div id="description">
+				<div class="tab">
+					<ul>
+						<li><a href="#"><span>Description</span></a>
+							<div></div></li>
+						<li><a href="#"><span>Amenities</span></a>
+							<div></div></li>
+						<li><a href="#"><span>House Rules</span></a>
+							<div></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="master">
+				<div><img src="img/square_225.jpg" alt="name">
+				<span>NAME</span>
+				<form>
+					<input type="button" name="contact" value="Contact Me">
+				</form>
+				</div>
+			</div>
+			<div id="review">
+				<div class="tab">
+					<ul>
+						<li><a href="#"><span>Review</span></a>
+							<div></div></li>
+					</ul>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </body>
