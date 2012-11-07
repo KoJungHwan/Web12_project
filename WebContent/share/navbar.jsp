@@ -5,9 +5,9 @@
 		<div class="navbar-inner">
 			<a class="brand" href="#">MJ 2012</a>
 			<ul class="nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Popular</a></li>
-				<li><a href="#">My Wish Lists</a></li>
+				<li id="home"><a href="Main.jsp">Home</a></li>
+				<li id="popular"><a href="basic.jsp">Popular</a></li>
+				<li id="wishlist"><a href="#">My Wish Lists</a></li>
 			</ul>
 		</div>
 	</div>
